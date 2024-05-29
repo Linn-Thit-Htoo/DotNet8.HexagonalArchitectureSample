@@ -76,7 +76,6 @@ public class BlogRepository : IBlogRepository
 
             #region Patch Method Validation
 
-            #endregion
             if (!string.IsNullOrEmpty(requestModel.BlogTitle))
             {
                 item.BlogTitle = requestModel.BlogTitle;
@@ -91,6 +90,8 @@ public class BlogRepository : IBlogRepository
             {
                 item.BlogContent = requestModel.BlogContent;
             }
+
+            #endregion
 
             _appDbContext.Entry(item).State = EntityState.Modified;
 
