@@ -1,5 +1,4 @@
 ﻿using DotNet8.HexagonalArchitectureSample.Models.Setup.Blog;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotNet8.HexagonalArchitectureSample.Features.Blog
