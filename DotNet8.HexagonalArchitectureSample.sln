@@ -5,6 +5,10 @@ VisualStudioVersion = 17.10.34902.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.HexagonalArchitectureSample", "DotNet8.HexagonalArchitectureSample\DotNet8.HexagonalArchitectureSample.csproj", "{BE3E159D-0B0A-4066-B22F-F03036ADE326}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.HexagonalArchitectureSample.DbService", "DotNet8.HexagonalArchitectureSample.DbService\DotNet8.HexagonalArchitectureSample.DbService.csproj", "{C48FEF5A-F555-4B3A-85A2-F996D347C263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8.HexagonalArchitectureSample.Models", "DotNet8.HexagonalArchitectureSample.Models\DotNet8.HexagonalArchitectureSample.Models.csproj", "{B1109B85-17A4-4B2C-831F-14B01BB8C218}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{BE3E159D-0B0A-4066-B22F-F03036ADE326}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE3E159D-0B0A-4066-B22F-F03036ADE326}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE3E159D-0B0A-4066-B22F-F03036ADE326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C48FEF5A-F555-4B3A-85A2-F996D347C263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C48FEF5A-F555-4B3A-85A2-F996D347C263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C48FEF5A-F555-4B3A-85A2-F996D347C263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C48FEF5A-F555-4B3A-85A2-F996D347C263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1109B85-17A4-4B2C-831F-14B01BB8C218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1109B85-17A4-4B2C-831F-14B01BB8C218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1109B85-17A4-4B2C-831F-14B01BB8C218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1109B85-17A4-4B2C-831F-14B01BB8C218}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
