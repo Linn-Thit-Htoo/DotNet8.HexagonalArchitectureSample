@@ -40,7 +40,6 @@ public static class ModularService
 
     #region Add Json Services
 
-    #endregion
     public static IServiceCollection AddJsonServices(this IServiceCollection services, WebApplicationBuilder builder)
     {
         builder.Services.AddControllers().AddJsonOptions(opt =>
@@ -49,6 +48,8 @@ public static class ModularService
         });
         return services;
     }
+
+    #endregion
 
     public static IServiceCollection AddDbContextService(this IServiceCollection services, WebApplicationBuilder builder)
     {
