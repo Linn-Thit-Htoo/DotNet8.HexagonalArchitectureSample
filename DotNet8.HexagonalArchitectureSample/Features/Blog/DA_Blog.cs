@@ -15,7 +15,62 @@ namespace DotNet8.HexagonalArchitectureSample.Features.Blog
 
         public async Task<BlogListResponseModel> GetBlogsAsync()
         {
-            return await _blogRepository.GetBlogsListAsync();
+            try
+            {
+                return await _blogRepository.GetBlogsListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<BlogModel> GetBlogByIdAsync(long id)
+        {
+            try
+            {
+                return await _blogRepository.GetBlogByIdAsync(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<int> CreateBlogAsync(BlogRequestModel requestModel)
+        {
+            try
+            {
+                return await _blogRepository.CreateBlogAsync(requestModel);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<int> PatchBlogAsync(BlogRequestModel requestModel, long id)
+        {
+            try
+            {
+                return await _blogRepository.PatchBlogAsync(requestModel, id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<int> DeleteBlogAsync(long id)
+        {
+            try
+            {
+                return await _blogRepository.DeleteBlogAsync(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }
