@@ -2,75 +2,74 @@
 using DotNet8.HexagonalArchitectureSample.Models.Setup.Blog;
 using DotNet8.HexagonalArchitectureSample.Ports.Blog;
 
-namespace DotNet8.HexagonalArchitectureSample.Features.Blog
+namespace DotNet8.HexagonalArchitectureSample.Features.Blog;
+
+public class DA_Blog
 {
-    public class DA_Blog
+    private readonly IBlogRepository _blogRepository;
+
+    public DA_Blog(IBlogRepository blogRepository)
     {
-        private readonly IBlogRepository _blogRepository;
+        _blogRepository = blogRepository;
+    }
 
-        public DA_Blog(IBlogRepository blogRepository)
+    public async Task<BlogListResponseModel> GetBlogsAsync()
+    {
+        try
         {
-            _blogRepository = blogRepository;
+            return await _blogRepository.GetBlogsListAsync();
         }
-
-        public async Task<BlogListResponseModel> GetBlogsAsync()
+        catch (Exception ex)
         {
-            try
-            {
-                return await _blogRepository.GetBlogsListAsync();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            throw new Exception(ex.Message);
         }
+    }
 
-        public async Task<BlogModel> GetBlogByIdAsync(long id)
+    public async Task<BlogModel> GetBlogByIdAsync(long id)
+    {
+        try
         {
-            try
-            {
-                return await _blogRepository.GetBlogByIdAsync(id);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            return await _blogRepository.GetBlogByIdAsync(id);
         }
-
-        public async Task<int> CreateBlogAsync(BlogRequestModel requestModel)
+        catch (Exception ex)
         {
-            try
-            {
-                return await _blogRepository.CreateBlogAsync(requestModel);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            throw new Exception(ex.Message);
         }
+    }
 
-        public async Task<int> PatchBlogAsync(BlogRequestModel requestModel, long id)
+    public async Task<int> CreateBlogAsync(BlogRequestModel requestModel)
+    {
+        try
         {
-            try
-            {
-                return await _blogRepository.PatchBlogAsync(requestModel, id);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            return await _blogRepository.CreateBlogAsync(requestModel);
         }
-
-        public async Task<int> DeleteBlogAsync(long id)
+        catch (Exception ex)
         {
-            try
-            {
-                return await _blogRepository.DeleteBlogAsync(id);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            throw new Exception(ex.Message);
+        }
+    }
+
+    public async Task<int> PatchBlogAsync(BlogRequestModel requestModel, long id)
+    {
+        try
+        {
+            return await _blogRepository.PatchBlogAsync(requestModel, id);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
+
+    public async Task<int> DeleteBlogAsync(long id)
+    {
+        try
+        {
+            return await _blogRepository.DeleteBlogAsync(id);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
         }
     }
 }
