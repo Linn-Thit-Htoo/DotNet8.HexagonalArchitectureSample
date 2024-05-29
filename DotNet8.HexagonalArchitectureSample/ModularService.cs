@@ -53,7 +53,6 @@ public static class ModularService
 
     #region Add Db Context Service
 
-    #endregion
     public static IServiceCollection AddDbContextService(this IServiceCollection services, WebApplicationBuilder builder)
     {
         services.AddDbContext<AppDbContext>(opt =>
@@ -62,6 +61,8 @@ public static class ModularService
         });
         return services;
     }
+
+    #endregion
 
     public static IServiceCollection AddRepositoriesService(this IServiceCollection services)
     {
