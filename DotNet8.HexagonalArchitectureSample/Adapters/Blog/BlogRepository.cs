@@ -43,7 +43,6 @@ public class BlogRepository : IBlogRepository
 
     #region Get Blog By Id Async
 
-    #endregion
     public async Task<BlogModel> GetBlogByIdAsync(long id)
     {
         try
@@ -59,6 +58,8 @@ public class BlogRepository : IBlogRepository
             throw new Exception(ex.Message);
         }
     }
+
+    #endregion
 
     public async Task<int> CreateBlogAsync(BlogRequestModel requestModel)
     {
