@@ -20,12 +20,13 @@ public static class ModularService
 
     #region Add Business Logic Services
 
-    #endregion
     public static IServiceCollection AddBusinessLogicServices(this IServiceCollection services)
     {
         services.AddScoped<BL_Blog>();
         return services;
     }
+
+    #endregion
 
     public static IServiceCollection AddDataAccessServices(this IServiceCollection services)
     {
