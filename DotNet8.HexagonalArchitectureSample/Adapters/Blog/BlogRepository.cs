@@ -74,6 +74,9 @@ public class BlogRepository : IBlogRepository
                 .AsNoTracking()
                 .FirstOrDefaultAsync(x => x.BlogId == id) ?? throw new Exception("No data found.");
 
+            #region Patch Method Validation
+
+            #endregion
             if (!string.IsNullOrEmpty(requestModel.BlogTitle))
             {
                 item.BlogTitle = requestModel.BlogTitle;
