@@ -66,10 +66,11 @@ public static class ModularService
 
     #region Add Repositories Service
 
-    #endregion
     public static IServiceCollection AddRepositoriesService(this IServiceCollection services)
     {
         services.AddScoped<IBlogRepository, BlogRepository>();
         return services;
     }
+
+    #endregion
 }
