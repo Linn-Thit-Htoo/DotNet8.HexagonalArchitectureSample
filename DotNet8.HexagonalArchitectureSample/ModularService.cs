@@ -30,12 +30,13 @@ public static class ModularService
 
     #region Add Data Access Services
 
-    #endregion
     public static IServiceCollection AddDataAccessServices(this IServiceCollection services)
     {
         services.AddScoped<DA_Blog>();
         return services;
     }
+
+    #endregion
 
     public static IServiceCollection AddJsonServices(this IServiceCollection services, WebApplicationBuilder builder)
     {
