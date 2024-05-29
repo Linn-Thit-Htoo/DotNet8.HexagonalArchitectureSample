@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DotNet8.HexagonalArchitectureSample.DbService.Entities;
+﻿namespace DotNet8.HexagonalArchitectureSample.DbService.Entities;
 
 public partial class Income
 {
