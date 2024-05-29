@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace DotNet8.HexagonalArchitectureSample.DbService.Entities;
+﻿namespace DotNet8.HexagonalArchitectureSample.DbService.Entities;
 
 public partial class TblBlog
 {
