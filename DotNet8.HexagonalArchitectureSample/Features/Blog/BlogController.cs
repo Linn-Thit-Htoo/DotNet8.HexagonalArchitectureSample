@@ -7,5 +7,17 @@ namespace DotNet8.HexagonalArchitectureSample.Features.Blog
     [ApiController]
     public class BlogController : ControllerBase
     {
+        private readonly BL_Blog _bL_Blog;
+
+        public BlogController(BL_Blog bL_Blog)
+        {
+            _bL_Blog = bL_Blog;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetBlogs()
+        {
+            return Ok(await _bL_Blog.GetBlogsAsync());
+        }
     }
 }

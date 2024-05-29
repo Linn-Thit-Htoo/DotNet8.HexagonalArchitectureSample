@@ -1,5 +1,7 @@
-﻿using DotNet8.HexagonalArchitectureSample.DbService.Entities;
+﻿using DotNet8.HexagonalArchitectureSample.Adapters.Blog;
+using DotNet8.HexagonalArchitectureSample.DbService.Entities;
 using DotNet8.HexagonalArchitectureSample.Features.Blog;
+using DotNet8.HexagonalArchitectureSample.Ports.Blog;
 using Microsoft.EntityFrameworkCore;
 
 namespace DotNet8.HexagonalArchitectureSample
@@ -11,6 +13,7 @@ namespace DotNet8.HexagonalArchitectureSample
             services.AddDbContextService(builder)
                 .AddDataAccessServices()
                 .AddBusinessLogicServices()
+                .AddRepositoriesService()
                 .AddJsonServices(builder);
             return services;
         }
@@ -42,6 +45,12 @@ namespace DotNet8.HexagonalArchitectureSample
             {
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
             });
+            return services;
+        }
+
+        public static IServiceCollection AddRepositoriesService(this IServiceCollection services)
+        {
+            services.AddScoped<IBlogRepository, BlogRepository>();
             return services;
         }
     }
