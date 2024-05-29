@@ -78,6 +78,9 @@ public class BlogRepository : IBlogRepository
 
     #endregion
 
+    #region Patch Blog Async
+
+    #endregion
     public async Task<int> PatchBlogAsync(BlogRequestModel requestModel, long id)
     {
         try
