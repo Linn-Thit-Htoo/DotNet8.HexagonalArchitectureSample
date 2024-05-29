@@ -17,7 +17,6 @@ public class BlogRepository : IBlogRepository
 
     #region Get Blogs List Async
 
-    #endregion
     public async Task<BlogListResponseModel> GetBlogsListAsync()
     {
         try
@@ -39,6 +38,8 @@ public class BlogRepository : IBlogRepository
             throw new Exception(ex.Message);
         }
     }
+
+    #endregion
 
     public async Task<BlogModel> GetBlogByIdAsync(long id)
     {
