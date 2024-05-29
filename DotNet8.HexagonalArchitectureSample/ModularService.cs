@@ -38,6 +38,9 @@ public static class ModularService
 
     #endregion
 
+    #region Add Json Services
+
+    #endregion
     public static IServiceCollection AddJsonServices(this IServiceCollection services, WebApplicationBuilder builder)
     {
         builder.Services.AddControllers().AddJsonOptions(opt =>
