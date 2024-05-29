@@ -15,6 +15,9 @@ public class BlogRepository : IBlogRepository
         _appDbContext = appDbContext;
     }
 
+    #region Get Blogs List Async
+
+    #endregion
     public async Task<BlogListResponseModel> GetBlogsListAsync()
     {
         try
